@@ -1,0 +1,342 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  font-family: arial;
+}
+header {
+  height: 100vh;
+}
+.container:after, .container:before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Start navbar */
+.nav {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ececec;
+  min-height: 50px;
+  height: auto;
+}
+.nav .nav-heading {float: left}
+
+.nav .nav-heading .toggle-nav {
+  padding: 2px 10px;
+  border-radius: 5px;
+  border: none;
+  display: none;
+  background-color: transparent;
+}
+.nav .nav-heading > a {
+  text-decoration: none;
+  color: #000;
+  line-height: 60px;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+/* Start menu */
+.nav .menu {
+  float: right;
+}
+.nav .menu:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.nav .list {
+  float: right;
+  margin: 0;
+}
+.nav .list > li {
+  float: left;
+  list-style: none;
+}
+.nav .list > li > a {
+  color: #555;
+  text-decoration: none;
+  display: block;
+  line-height: 60px;
+  padding: 0 10px;
+}
+.nav .list > li > a:hover,
+.nav .list > li.active > a {
+  color: #333
+}
+
+/* Start drodpwn menu */
+.categories {
+  position: relative;
+}
+.nav .list .categories .drop-down {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FFF;
+  border: 1px solid #ccc;
+  padding: 5px 0;
+  min-width: 160px;
+  width: auto;
+  white-space: nowrap;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  display: none;
+  z-index: 99999
+}
+.nav .list .drop-down > .seprator {
+  height: 1px;
+  width: 100%;
+  margin: 9px 0;
+  background-color: #e5e5e5
+}
+.drop-down > li > a {
+  color: #333;
+  display: block;
+  padding: 3px 20px;
+  text-decoration: none;
+}
+.show {
+  display: block
+}
+
+/* Sub dropdown menu */
+.categories .drop-down .sub-drop-down {position: relative}
+.categories .drop-down .sub-drop-down:hover .sub-dropdown {
+  display: block;
+}
+.categories .drop-down .sub-dropdown {
+  position: absolute;
+  top: -20px;
+  left: 107%;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  padding: 10px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  display: none;
+}
+.categories .drop-down .sub-dropdown:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #cccccc
+}
+.categories .drop-down .sub-dropdown > li > a {
+  color: #555;
+  padding: 5px 0;
+  display: block
+}
+/* End sub dropdown menu */
+/* Dark theme */
+.dark-nav {background-color: #2f3340}
+
+.dark-nav .list > li > a {color: #BBB}
+
+.dark-nav .list > li > a:hover,
+.dark-nav .list > li.active > a {color: #FFF}
+
+.dark-nav .nav-heading > a {color: #EEE}
+
+.dark-nav .nav-heading .toggle-nav {color: #EEE}
+
+/* End Dark theme */
+
+/* Start media query for navbar */
+@media (max-width: 767px) {
+  .nav .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .nav .nav-heading {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid #e7e7e7
+  }
+  .nav .nav-heading .brand {float: left}
+
+  .nav .nav-heading .toggle-nav {
+    display: block;
+    float: right;
+    margin-top: 14px;
+  }
+
+  .nav .menu {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: none;
+  }
+
+  .nav .list {
+    float: none;
+    width: 100%;
+  }
+  .nav .list > li {
+    float: none;
+    width: 100%;
+  }
+  .nav .list > li > a {padding: 12px 0;line-height: 1}
+
+  .nav .list .categories .drop-down {
+    background-color: transparent;
+    border: none;
+    position: static;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0
+  }
+  .categories .drop-down .sub-dropdown {
+    position: static;
+    background-color: transparent;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+  .categories .drop-down .sub-dropdown > li > a {
+    color: #888;
+  }
+  .categories .drop-down .sub-dropdown:before {
+    display: none
+  }
+  /* Simple reset for dark theme */
+  .dark-nav .menu {background-color: #252831}
+  .dark-nav .nav-heading {border-bottom-color: #31343c}
+  .dark-nav .list .drop-down > li > a {color: #AAA}
+  .dark-nav .list .categories .drop-down .seprator {background-color: #2a2d38}
+
+}
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+.open-button_ {
+  float: right;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.header-main{
+  background-color: black;
+}
+
+.text, .text-second{
+    position: absolute;
+    bottom: 25px;
+    left: 35px;
+    right: 35px;
+    max-height: 95px;
+    z-index: 1;
+    color: #FFF;
+    font-family: 'Droid Serif';
+    font-size: 50px;
+}
+.text-second{
+  font-size: 14px;
+
+
+}
+.content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+.news-bar{
+  margin-top: -21px;
+  display: flex;
+  justify-content: space-between;
+}
+.news-bar h1{
+ font-size: 18px;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kaskelen</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	
+	<header>
+	  <!--  Remove dark nav  -->
+	  <nav class="nav dark-nav">
+	    <div class="container">
+	      <div class="nav-heading">
+	        <button class="toggle-nav" data-toggle="open-navbar1"><i class="fa fa-align-right"></i></button>
+	        <a class="brand" href="#"><img style="width: 185px;height: 55px;" src="img/PicsArt_10-27-10.59.11.png" alt=""></a>
+	      </div>
+	      <div class="menu" id="open-navbar1">
+	        <ul class="list">
+	          <li><a href="#">Главная</a></li>
+	          <li class="categories"><a href="#" id="open-categories" data-dropdown="target" href="#"> </a>
+	            <ul class="drop-down" id="target">
+	              <li><a href="#">Actions</a></li>
+	              <li><a href="#">Something else here</a></li>
+	              <li class="sub-drop-down"><a href="#">Another dropdown menu</a>
+	                <ul class="sub-dropdown">
+	                  <li><a href="#">Action</a></li>
+	                  <li><a href="#">Another action</a></li>
+	                  <li><a href="#">One more</a></li>
+	                  <li class="speprator"></li>
+	                  <li><a href="#">Somthething else here</a></li>
+	                </ul>
+	              </li>
+	              <li class="seprator"></li>
+	              <li><a href="#">Seprated link</a></li>
+	              <li class="seprator"></li>
+	              <li><a href="#">One more seprated link.</a></li>
+	            </ul>
+	          </li>
+	          <li><a href="#">Новости</a></li>
+	          <li><a href="#">Афиша</a></li>
+	          <li><a href="#">Каталог</a></li>
+	          <li><button class="open-button_" onclick="openForm()">Регистрация</button></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+     <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+   <div class="header-main">
+   	<div class="container">
+   		<div class="row">
+   			<div class="col-8">
+   				<img style="width: 755px;height: 480px;" src="img/main-photo.jpg" alt="">
+   				<a class="text" >
+								Новости города Каскелен&hellip; </a>
+   			</div>
+   			<!-- /.col-8 -->
+   			<div class="col-4">
+             <img style="width: 355px;height: 240px;" src="img/right_logo.jpg" alt="">
+   				<a  class="text-second" >
+								Новости города Каскелен&hellip; </a>
+			<img style="width: 355px;height: 240px;" src="img/right_logo.jpg" alt="">
+   				<a class="text-second" >
+								Новости города Каскелен&hellip; </a>
+   			</div>
+   			<!-- /.col-4 -->
+   		</div>
+   		<!-- /.row -->
+   	</div>
+   	<!-- /.container -->
+   </div>
+   <!-- /.header-main -->
+	</header>
+
+
+  <div class="news-bar">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-3">
+  		<img style="width: 292px;height: 178px;" src="img/sportkompleks-kaskelen-altyn-auyl-5.jpg" alt="Notebook" style="width:100%;">
+       <div class="content">
+      <h1> Новости города Каскелен </h1>
+    <p>27 октябрь 2018</p>
+  </div>
+  	</div>
+  	<div class="col-3">
+  		<img style="width: 292px;height: 178px;" src="img/new-bar_photo1.jpg" alt="Notebook" style="width:100%;">
+       <div class="content">
+      <h1> Новости города Каскелен </h1>
+    <p>27 октябрь 2018</p>
+  </div>
+  	</div>
+  	<div class="col-3">
+  		<img style="width: 292px;height: 178px;" src="img/sportkompleks-kaskelen-altyn-auyl-5.jpg" alt="Notebook" style="width:100%;">
+       <div class="content">
+      <h1>Новости города Каскелен </h1>
+    <p>27 октябрь 2018</p>
+  </div>
+  	</div>
+  	<div class="col-3">
+  		<img style="width: 292px;height: 178px;" src="img/new-bar_photo2.jpg" alt="Notebook" style="width:100%;">
+       <div class="content">
+      <h1> Новости города Каскелен </h1>
+    <p>27 октябрь 2018</p>
+  </div>
+  	</div>
+  		</div>
+  		
+  	</div>
+  
+  </div>
+  <!-- /.news-bar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+</script>
+</body>
+</html>
